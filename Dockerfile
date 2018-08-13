@@ -1,4 +1,3 @@
-
 # Use an official Python runtime as a parent image
 FROM python:2.7-slim
 
@@ -21,6 +20,3 @@ ENV NAME World
 # Run app.py when the container launches
 CMD ["python", "app.py"]
 
-#
-#ENV http_proxy localhost:3128
-#ENV https_proxy localhost:3128
