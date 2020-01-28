@@ -1,6 +1,6 @@
 version: "3"
 services:
-  web:
+  gettingstarted:
     # replace username/repo:tag with your name and image details
 #    image: amautsch/get-started:part2
     image: gettingstarted:1.0
