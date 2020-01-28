@@ -14,7 +14,8 @@ docker image build -t gettingstarted:1.0 .
 
 ##Run
 docker run gettingstarted:1.0 
-docker run -p 8000:80 --name gettingstarted gettingstarted:1.0
+docker run -p 8100:80 gettingstarted:1.0
+docker run -p 8100:80 --name gettingstarted -d gettingstarted:1.0 
 
 ##Compose
 docker-compose -f docker-compose.yml up -d
