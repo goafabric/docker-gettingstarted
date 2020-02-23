@@ -13,20 +13,22 @@ docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.
 docker image build .
 docker image ls
 
-##build with name
+##Build with name
 docker image build -t gettingstarted:latest .
 docker image tag gettingstarted:latest gettingstarted:1.0
 
 ##Run
-#just start but no access
+##just start but no access
 docker run gettingstarted:1.0
-#start with access 
+##start with access 
 docker run -p 8100:80 gettingstarted:1.0
-#start with name in background
+##start with name in background
 docker run -p 8100:80 --name gettingstarted -d gettingstarted:1.0 
 
-##Compose
+#Compose
 docker-compose -f docker-compose.yml up -d
+docker-compose -f docker-compose.yml down
+
 docker-compose -p mickeymouse -f docker-compose.yml up -d
 
 #Push
