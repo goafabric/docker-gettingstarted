@@ -9,13 +9,13 @@ docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
 #Image Creation
+##app.py add comment to avoid caching
 ##Build
 cd src/deploy
 docker image build .
 docker image ls | grep 37f14a1b4d2f
 
 ##Build with name
-##app.py add comment to avoid caching
 docker image build -t gettingstarted:latest .
 docker image tag gettingstarted:latest gettingstarted:1.0
 
